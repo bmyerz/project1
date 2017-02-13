@@ -1,40 +1,37 @@
-package edu.uiowa.cs;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package instruciton;
 
-import com.sun.javafx.UnmodifiableArrayList;
-
-import java.util.ArrayList;
+/**
+ *
+ * @author gyeonghyeko
+ */
 import java.util.LinkedList;
 import java.util.List;
 
-public class Phase1 extends Instruction {
+public class Phase1{
 
-    /* Translates the MAL instruction to 1-3 TAL instructions
-     * and returns the TAL instructions in a list
-     *
-     * mals: input program as a list of Instruction objects
-     *
-     * returns a list of TAL instructions (should be same size or longer than input list)
-     */
-
-    public Phase1(int instruction_id, int rd, int rs, int rt, int immediate, int jump_address, int shift_amount, int label_id, int branch_label){
-    super(instruction_id, rd, rs, rt, immediate, jump_address, shift_amount, label_id, branch_label);
-    }
-
-
+    
     public static List<Instruction> mal_to_tal(List<Instruction> mals) {
-
-        List arr1 = new ArrayList();
-        arr1.add(instruction_id);
-        arr1.add(rd);
-        arr1.add(rs);
-        arr1.add(rt);
-        arr1.add(immediate);
-        arr1.add(jump_address);
-        arr1.add(shift_amount);
-        arr1.add(label_id);
-        arr1.add(branch_label);
-
-        return arr1;
+        
+        List<Instruction> tals = new LinkedList<Instruction>();
+        
+        for (int i=0; i<mals.size();i++) {
+            
+            //when opcode is 2(addu)
+            if (mals.get(0)==Instruction.valueOf(2)) {
+                return mals;
+            }
+            
+            //when opcode is 100(blt)
+            if (mals.get(0)==Instruction.valueOf(100))
+                return tals.addAll(8,1,16,8,0,0,0,0,0,6,0,1,0,0,0,0,0,3);
+        }
 
     }
 }
+
+//Question: how to treat Instruction type as Inter?
