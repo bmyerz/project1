@@ -33,31 +33,30 @@ public class Phase1{
         return mals;
 
         }
-        if(mals.get(0)==2){
-         mals.set(index, element))
-		return mals;
+        if(mals.get(0)==2){//addu instruction
+        return mals;
         }
-        if(mals.get(0)==3){
-        	mals.set(index, element)
-        	return mals;
+        if(mals.get(0)==3){//or instruction
+        return mals;
         }
-         
-        
-        if(mals.get(0)=6){
+        if(mals.get(0)=5){//beq instruction
+        	
+        }
+        if(mals.get(0)=6){//bne instruction
         mals.set(index, element)
         return mals;
         }
-        if(mals.get(0)==8){
+        if(mals.get(0)==8){//slt instruction
         mals.set(index, element)
         return mals;
         }
-        if(mals.get(0)==9){
+        if(mals.get(0)==9){//lui instruction
         mals.set(index, element)
         }
-        if(mals.get(0)==10){
+        if(mals.get(0)==10){//ori instruction
         mals.set(index, element)
         }
-        if(mals.get(0)==100){
+        if(mals.get(0)==100){//blt
        	/* slt $at,rs,rt
        	 * bne $at,zero,labelx
        	 */
@@ -65,7 +64,11 @@ public class Phase1{
         }
         mals.set(index, element)	
         }
-        if(mals.get(0)=101){
+        if(mals.get(0)=101){//bge instuction
+        /*
+         * slt $at,rs,rt
+         * beq $at,$zero, labelx
+         */
         mals.set(index, element)	
         }
         
