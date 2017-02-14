@@ -29,7 +29,7 @@ public class Phase1{
         ori $at,$at, Lower 16 bit immediate
         addu rt,rs,$at
         */
-      	mals.set(index, element)
+    
         return mals;
 
         }
@@ -40,36 +40,48 @@ public class Phase1{
         return mals;
         }
         if(mals.get(0)=5){//beq instruction
-        	
+        return mals;
         }
         if(mals.get(0)=6){//bne instruction
-        mals.set(index, element)
         return mals;
         }
         if(mals.get(0)==8){//slt instruction
-        mals.set(index, element)
         return mals;
         }
         if(mals.get(0)==9){//lui instruction
-        mals.set(index, element)
+        return mals;
         }
-        if(mals.get(0)==10){//ori instruction
-        mals.set(index, element)
+        if(mals.get(0)==10&&mals.get(4)<=16){//ori instruction
+        return mals;
+        }
+        if(mals.get(0)=10&&mals.get(4)>=16){
+        	
         }
         if(mals.get(0)==100){//blt
        	/* slt $at,rs,rt
        	 * bne $at,zero,labelx
        	 */
+        	mals.set(0, 8);
+        	mals.set(1, 1);
+        	mals.set(2, 16);
+        	mals.set(3, 8);
+        	mals.set(4, 0);
+        	mals.set(8, 0);
+        	mals.set(0, 6);
+        	mals.set(2, 1);
+        	mals.set(3, 0);
+        	mals.set(8, 3);
+        	return mals;
         	
         }
-        mals.set(index, element)	
-        }
+        	
+        
         if(mals.get(0)=101){//bge instuction
         /*
          * slt $at,rs,rt
          * beq $at,$zero, labelx
          */
-        mals.set(index, element)	
+ 	
         }
         
 
