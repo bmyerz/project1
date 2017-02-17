@@ -41,6 +41,43 @@ public class Phase3 {
                 int addiu_binary = Integer.valueOf(addiu_string_binary);
                 binary_list.add(addiu_binary);
             }
+            
+            if(tals.tmp.instruction_id=8){//slt//R-type
+                int slt_op=0;
+                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+                String slt_rt_binary=Integer.toBinaryString(tals_tmp.rt);
+                String slt_rd_binary=Integer.toBinaryString(tals_tmp.rd);
+                String slt_shamt_binary=Integer.toBinaryString(tals_tmp.shift_amount);
+                String slt_funct_binary=Integer.toBinaryString(tals_tmp.shift_amount);
+                int slt_funct=42;
+
+
+
+            }
+            if(tals.tmp.instruction_id=9){//lui // I-type
+                int lui_op=15;
+                String lui_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+                String slt
+
+            }
+            if(tals.tmp.instruction_id=10){//ori //I-type
+                int ori_op=13;
+                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+                String slt
+
+            }
+            if(tals.tmp.instruction_id=100){//blt //
+                int lui_op=;
+                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+                String slt
+
+            }
+            if(tals.tmp.instruction_id=101){//bge //
+                int lui_op=;
+                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+                String slt
+
+            }
         }
         return null;
     }
