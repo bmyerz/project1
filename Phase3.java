@@ -101,7 +101,7 @@ public class Phase3 {
                String slt_rd_binary=Integer.toBinaryString(tals_tmp.rd);
                String slt_shamt_binary=Integer.toBinaryString(tals_tmp.shift_amount);
                String slt_funct_binary = Integer.toBinaryString(42);
-               String slt_string_binary = slt_op_binary +  slt_rs_binary +  slt_rs_binary +slt_rd_binary+slt_shamt_binary+slt_funct_binary;
+               String slt_string_binary = slt_op_binary +  slt_rs_binary +  slt_rt_binary +slt_rd_binary+slt_shamt_binary+slt_funct_binary;
                int slt_binary = Integer.valueOf(slt_string_binary);
                binary_list.add(slt_string_binary);
                 
