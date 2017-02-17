@@ -43,14 +43,16 @@ public class Phase3 {
             }
             
             if(tals.tmp.instruction_id=8){//slt//R-type
-                String slt_op_binary = Integer.toBinaryString(0);
-                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
-                String slt_rt_binary=Integer.toBinaryString(tals_tmp.rt);
-                String slt_rd_binary=Integer.toBinaryString(tals_tmp.rd);
-                String slt_shamt_binary=Integer.toBinaryString(tals_tmp.shift_amount);
-                String slt_funct_binary = Integer.toBinaryString(42);
-               String addiu_string_binary = slt_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
-
+               String slt_op_binary = Integer.toBinaryString(0);
+               String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
+               String slt_rt_binary=Integer.toBinaryString(tals_tmp.rt);
+               String slt_rd_binary=Integer.toBinaryString(tals_tmp.rd);
+               String slt_shamt_binary=Integer.toBinaryString(tals_tmp.shift_amount);
+               String slt_funct_binary = Integer.toBinaryString(42);
+               String slt_string_binary = slt_op_binary +  slt_rs_binary +  slt_rs_binary +slt_rd_binary+slt_shamt_binary+slt_funct_binary;
+               int slt_binary = Integer.valueOf(slt_string_binary);
+               binary_list.add(slt_string_binary);
+                
 
 
             }
