@@ -108,7 +108,7 @@ public class Phase3 {
 
 
             }
-            if(tals.tmp.instruction_id=9){//lui // I-type
+            if(tals.tmp.instruction_id==9){//lui // I-type
                     
                 String lui_op_binary = Integer.toBinaryString(15);
                 String lui_rs_binary = Integer.toBinaryString(tals_tmp.rs);
@@ -120,7 +120,7 @@ public class Phase3 {
                 binary_list.add(lui_binary);
 
             }
-            if(tals.tmp.instruction_id=10){//ori //I-type
+            if(tals.tmp.instruction_id==10){//ori //I-type
                     
                String ori_op_binary = Integer.toBinaryString(13);
                String ori_rs_binary = Integer.toBinaryString(tals_tmp.rs);
@@ -132,18 +132,7 @@ public class Phase3 {
 
 
             }
-            if(tals.tmp.instruction_id=100){//blt //
-                int lui_op=;
-                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
-                String slt
-
-            }
-            if(tals.tmp.instruction_id=101){//bge //
-                int lui_op=;
-                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
-                String slt
-
-            }
+           
         }
         return null;
     }
