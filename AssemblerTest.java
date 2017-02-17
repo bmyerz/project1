@@ -81,16 +81,16 @@ public class AssemblerTest {
 
         @Test
         public void test2() {
-            /* Fill in your additional test case here! */
+            // test 2
             List<Instruction> input = new LinkedList<Instruction>();
-            // label1: addu $t0, $zero, $zero
-            input.add(new Instruction(2, 8, 0, 0, 0, 0, 0, 1, 0));
-            // addu $s0, $s7, $t4
-            input.add(new Instruction(2,16,23,12,0,0,0,0,0));
-            // blt  $s0,$t0,label1
-            input.add(new Instruction(100,0,16,8,0,0,0,0,1));
-            // addiu $s1,$s2,0xF00000
-            input.add(new Instruction(1, 0, 18, 17, 0xF00000, 0, 0, 0, 0));
-            //testHelper(...);
+            // slt $s1 $s2 $s3
+            input.add(new Instruction(8,17,18,19,0,0,1,0,0));
+            // label2: $t0 $0 $s1
+            input.add(new Instruction(8,8,0,17,0,0,0,0,0));
+            // beq $s0 $s1 label2
+            input.add(new Instruction(5,0,16,17,0,0,0,2,0));
+            // bne $s3 $s4 3
+            input.add(new Instruction(6, 0, 19, 20, 3, 0, 0, 0, 0)); 
+        }
         }
 }
