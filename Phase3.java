@@ -8,7 +8,7 @@ package instruciton;
 
 /**
  *
- * @author gyeonghyeko
+ * @author gyeonghyeko, hyokyung kang
  */
 import java.util.LinkedList;
 import java.util.List;
@@ -43,13 +43,13 @@ public class Phase3 {
             }
             
             if(tals.tmp.instruction_id=8){//slt//R-type
-                int slt_op=0;
+                String slt_op_binary = Integer.toBinaryString(0);
                 String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
                 String slt_rt_binary=Integer.toBinaryString(tals_tmp.rt);
                 String slt_rd_binary=Integer.toBinaryString(tals_tmp.rd);
                 String slt_shamt_binary=Integer.toBinaryString(tals_tmp.shift_amount);
-                String slt_funct_binary=Integer.toBinaryString(tals_tmp.shift_amount);
-                int slt_funct=42;
+                String slt_funct_binary = Integer.toBinaryString(42);
+               String addiu_string_binary = slt_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
 
 
 
