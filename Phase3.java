@@ -31,7 +31,7 @@ public class Phase3 {
             Instruction tals_tmp=tals.get(i);
             
             //addiu
-            if (tals_tmp.instruction_id==1){
+            if (tals_tmp.instruction_id==1){//addiu//I-type
                 String addiu_op_binary = Integer.toBinaryString(9);
                 String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
                 String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
@@ -42,7 +42,7 @@ public class Phase3 {
                 binary_list.add(addiu_binary);
             }
             
-            if(tals.tmp.instruction_id=8){//slt//R-type
+            if(tals.tmp.instruction_id==8){//slt//R-type
                String slt_op_binary = Integer.toBinaryString(0);
                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
                String slt_rt_binary=Integer.toBinaryString(tals_tmp.rt);
