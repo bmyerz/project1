@@ -32,14 +32,14 @@ public class Phase3 {
             
             //addiu
             if (tals_tmp.instruction_id==1){
-                int addiu_op = 9;
+                String addiu_op_binary = Integer.toBinaryString(9);
                 String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
                 String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
                 String addiu_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
                 
-                String addiu_string_binary = addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
+                String addiu_string_binary = addiu_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
                 int addiu_binary = Integer.valueOf(addiu_string_binary);
-                binary_list.add(iaddiu_binary);
+                binary_list.add(addiu_binary);
             }
         }
         return null;
