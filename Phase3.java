@@ -30,14 +30,66 @@ public class Phase3 {
         for (int i=0; i<tals.size(); i++) {
             Instruction tals_tmp=tals.get(i);
             
-            //addiu
-            if (tals_tmp.instruction_id==1){//addiu//I-type
+            //addiu(I)
+            if (tals_tmp.instruction_id==1){
                 String addiu_op_binary = Integer.toBinaryString(9);
                 String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
                 String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
                 String addiu_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
                 
                 String addiu_string_binary = addiu_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
+                int addiu_binary = Integer.valueOf(addiu_string_binary);
+                binary_list.add(addiu_binary);
+            }
+            
+            //addu(R)
+            if (tals_tmp.instruction_id==2){
+                String addu_op_binary = Integer.toBinaryString(0);
+                String addu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String addu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String addu_rd_binary = Integer.toBinaryString(tals_tmp.rd);
+                String addu_shift_binary = Integer.toBinaryString(tals_tmp.shift_amount);
+                String addu_funct_binary = Integer.toBinaryString(33);
+                
+                String addu_string_binary = addu_op_binary + addu_rs_binary + addu_rt_binary +addu_rd_binary + addu_shift_binary + addu_funct_binary;
+                int addu_binary = Integer.valueOf(addu_string_binary);
+                binary_list.add(addu_binary);
+            }
+            
+            //or(R)
+            if (tals_tmp.instruction_id==3){
+                String or_op_binary = Integer.toBinaryString(0);
+                String or_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String or_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String or_rd_binary = Integer.toBinaryString(tals_tmp.rd);
+                String or_shift_binary = Integer.toBinaryString(tals_tmp.shift_amount);
+                String or_funct_binary = Integer.toBinaryString(37);
+                
+                String or_string_binary = or_op_binary + or_rs_binary + or_rt_binary +or_rd_binary + or_shift_binary + or_funct_binary;
+                int or_binary = Integer.valueOf(or_string_binary);
+                binary_list.add(or_binary);
+            }
+            
+            //beq(I)
+            if (tals_tmp.instruction_id==5){
+                String beq_op_binary = Integer.toBinaryString(4);
+                String beq_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String beq_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String beq_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String addiu_string_binary = beq_op_binary + beq_rs_binary + beq_rt_binary +beq_immediate_binary;
+                int addiu_binary = Integer.valueOf(addiu_string_binary);
+                binary_list.add(addiu_binary);
+            }
+            
+            //bne(I)
+            if (tals_tmp.instruction_id==6){
+                String bne_op_binary = Integer.toBinaryString(5);
+                String bne_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String bne_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String bne_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String addiu_string_binary = bne_op_binary + bne_rs_binary + bne_rt_binary +bne_immediate_binary;
                 int addiu_binary = Integer.valueOf(addiu_string_binary);
                 binary_list.add(addiu_binary);
             }
