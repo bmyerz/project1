@@ -31,7 +31,7 @@ public class Phase3 {
             Instruction tals_tmp=tals.get(i);
             
             //addiu(I)
-            if (tals_tmp.instruction_id==1){
+            if (tals_tmp.instruction_id==1){//addiu_I_type
                 String addiu_op_binary = Integer.toBinaryString(9);
                 String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
                 String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
@@ -109,15 +109,27 @@ public class Phase3 {
 
             }
             if(tals.tmp.instruction_id=9){//lui // I-type
-                int lui_op=15;
-                String lui_rs_binary=Integer.toBinaryString(tals_tmp.rs);
-                String slt
+                    
+                String lui_op_binary = Integer.toBinaryString(15);
+                String lui_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String lui_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String lui_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String lui_string_binary = lui_op_binary + lui_rs_binary + lui_rt_binary +lui_immediate_binary;
+                int lui_binary = Integer.valueOf(lui_string_binary);
+                binary_list.add(lui_binary);
 
             }
             if(tals.tmp.instruction_id=10){//ori //I-type
-                int ori_op=13;
-                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
-                String slt
+                    
+               String ori_op_binary = Integer.toBinaryString(13);
+               String ori_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+               String ori_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+               String ori_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+               String ori_string_binary = ori_op_binary + ori_rs_binary + ori_rt_binary +ori_immediate_binary;
+               int ori_binary = Integer.valueOf(ori_string_binary);
+               binary_list.add(ori_binary);
+
 
             }
             if(tals.tmp.instruction_id=100){//blt //
