@@ -55,7 +55,7 @@ public class Phase3 {
             
             if(tals_tmp.instruction_id==1||tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
             // put the algorithm for only I-type
-            
+            //need op,rs,rt,immediate//
             }
             
                  /*
