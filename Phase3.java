@@ -24,6 +24,12 @@ public class Phase3 {
      *
      */
     int functnumber;
+    
+    static void showpush(Stack st, int a) {
+                st.push(new Integer(a));
+                System.out.println("push(" + a + ")");
+                System.out.println("stack: " + st);}
+
     public static List<Integer> translate_instructions(List<Instruction> tals) {
         
         List<Integer> binary_list = new LinkedList<Integer>();
@@ -54,7 +60,7 @@ public class Phase3 {
                  int y=Integer.parseInt(x)
                 */
                 
-                //op//rs/rt//rd//shift/funct
+                   }
             
             }
             
