@@ -49,12 +49,12 @@ public class Phase3 {
                 }
                 
                 
-                
+                //op//rs/rt//rd//shift/funct
             
             }
             
-            if(tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
-            // put the algorithm for only R-type
+            if(tals_tmp.instruction_id==1||tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
+            // put the algorithm for only I-type
             
             }
             
