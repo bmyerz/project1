@@ -36,9 +36,15 @@ public class Phase3 {
             
             
             if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
-            // Do something// put the algorithm for only R-type
+            // put the algorithm for only R-type
             
             }
+            
+            if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
+            // put the algorithm for only R-type
+            
+            }
+            
                  /*
             if (){//addu rtype 
                 String addu_op_binary = Integer.toBinaryString(0);
