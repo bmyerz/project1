@@ -23,6 +23,7 @@ public class Phase3 {
      * returns a list of instructions in their 32-bit binary representation
      *
      */
+    int functnumber;
     public static List<Integer> translate_instructions(List<Instruction> tals) {
         
         List<Integer> binary_list = new LinkedList<Integer>();
@@ -36,11 +37,16 @@ public class Phase3 {
             
             
             if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
-            // put the algorithm for only R-type
+                
+                if(tals_tmp.instruction_id==2){
+                functnumber=33;
+                }   
+                
+                
             
             }
             
-            if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
+            if(tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
             // put the algorithm for only R-type
             
             }
