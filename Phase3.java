@@ -36,11 +36,18 @@ public class Phase3 {
             // check the id is R type or I type. 
             
             
-            if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
+            if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==8){
                 
                 if(tals_tmp.instruction_id==2){
                 functnumber=33;
-                }   
+                }
+                 if(tals_tmp.instruction_id==3){
+                functnumber=37;
+                }
+                 if(tals_tmp.instruction_id==8){
+                functnumber=42;
+                }
+                
                 
                 
             
