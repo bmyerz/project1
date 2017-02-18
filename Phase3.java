@@ -33,7 +33,7 @@ public class Phase3 {
         a /= 2;
         }
         while(st.size()<=5){
-         st.push(0)}
+         st.push(0)}}
     public static void decimaltobinary6(Stack st, int a) {// change integer to binary number put those numbers in stack.. 
         while (a != 0)
         {
@@ -42,7 +42,7 @@ public class Phase3 {
         a /= 2;
         }
         while(st.size()<=6){
-         st.push(0)}
+         st.push(0)}}
     public static List<Integer> translate_instructions(List<Instruction> tals) {
         
         List<Integer> binary_list = new LinkedList<Integer>();
