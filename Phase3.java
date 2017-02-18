@@ -25,10 +25,14 @@ public class Phase3 {
      */
     int functnumber;
     
-    static void showpush(Stack st, int a) {
-                st.push(new Integer(a));
-                System.out.println("push(" + a + ")");
-                System.out.println("stack: " + st);}
+    static void showpush(Stack st, int a) {// change integer to binary number put those numbers in stack.. 
+    while (a != 0)
+    {
+      int d = a % 2;
+      st.push(d);
+      a /= 2;
+    }
+    }
 
     public static List<Integer> translate_instructions(List<Instruction> tals) {
         
