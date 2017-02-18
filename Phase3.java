@@ -48,6 +48,11 @@ public class Phase3 {
                 functnumber=42;
                 }
                 
+                /*
+                change integer to binary 
+                 String x=Integer.toBinaryString()
+                 int y=Integer.parseInt(x)
+                */
                 
                 //op//rs/rt//rd//shift/funct
             
