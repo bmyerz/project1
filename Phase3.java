@@ -30,20 +30,17 @@ public class Phase3 {
         for (int i=0; i<tals.size(); i++) {
             Instruction tals_tmp=tals.get(i);
             
-            //addiu(I)
-            if (tals_tmp.instruction_id==1){//addiu_I_type
-                String addiu_op_binary = Integer.toBinaryString(9);
-                String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
-                String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
-                String addiu_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
-                
-                String addiu_string_binary = addiu_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
-                int addiu_binary = Integer.valueOf(addiu_string_binary);
-                binary_list.add(addiu_binary);
-            }
             
-            //addu(R)
-            if (tals_tmp.instruction_id==2){
+           
+            // check the id is R type or I type. 
+            
+            
+            if(tals_tmp.instruction_id==2||tals_tmp.instruction_id==3||tals_tmp.instruction_id==3){
+            // Do something// put the algorithm for only R-type
+            
+            }
+                 /*
+            if (){//addu rtype 
                 String addu_op_binary = Integer.toBinaryString(0);
                 String addu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
                 String addu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
@@ -55,7 +52,7 @@ public class Phase3 {
                 int addu_binary = Integer.valueOf(addu_string_binary);
                 binary_list.add(addu_binary);
             }
-            
+           
             //or(R)
             if (tals_tmp.instruction_id==3){
                 String or_op_binary = Integer.toBinaryString(0);
@@ -69,31 +66,6 @@ public class Phase3 {
                 int or_binary = Integer.valueOf(or_string_binary);
                 binary_list.add(or_binary);
             }
-            
-            //beq(I)
-            if (tals_tmp.instruction_id==5){
-                String beq_op_binary = Integer.toBinaryString(4);
-                String beq_rs_binary = Integer.toBinaryString(tals_tmp.rs);
-                String beq_rt_binary = Integer.toBinaryString(tals_tmp.rt);
-                String beq_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
-                
-                String addiu_string_binary = beq_op_binary + beq_rs_binary + beq_rt_binary +beq_immediate_binary;
-                int addiu_binary = Integer.valueOf(addiu_string_binary);
-                binary_list.add(addiu_binary);
-            }
-            
-            //bne(I)
-            if (tals_tmp.instruction_id==6){
-                String bne_op_binary = Integer.toBinaryString(5);
-                String bne_rs_binary = Integer.toBinaryString(tals_tmp.rs);
-                String bne_rt_binary = Integer.toBinaryString(tals_tmp.rt);
-                String bne_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
-                
-                String addiu_string_binary = bne_op_binary + bne_rs_binary + bne_rt_binary +bne_immediate_binary;
-                int addiu_binary = Integer.valueOf(addiu_string_binary);
-                binary_list.add(addiu_binary);
-            }
-            
             if(tals.tmp.instruction_id==8){//slt//R-type
                String slt_op_binary = Integer.toBinaryString(0);
                String slt_rs_binary=Integer.toBinaryString(tals_tmp.rs);
@@ -107,8 +79,48 @@ public class Phase3 {
                 
 
 
-            }
-            if(tals.tmp.instruction_id==9){//lui // I-type
+            }*/
+            
+            //addiu(I)
+            /*if (tals_tmp.instruction_id==1){//addiu_I_type
+                String addiu_op_binary = Integer.toBinaryString(9);
+                String addiu_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String addiu_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String addiu_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String addiu_string_binary = addiu_op_binary + addiu_rs_binary + addiu_rt_binary +addiu_immediate_binary;
+                int addiu_binary = Integer.valueOf(addiu_string_binary);
+                binary_list.add(addiu_binary);
+            }*/
+            
+            
+            
+            //beq(I)
+            /*if (tals_tmp.instruction_id==5){
+                String beq_op_binary = Integer.toBinaryString(4);
+                String beq_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String beq_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String beq_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String addiu_string_binary = beq_op_binary + beq_rs_binary + beq_rt_binary +beq_immediate_binary;
+                int addiu_binary = Integer.valueOf(addiu_string_binary);
+                binary_list.add(addiu_binary);
+            }*/
+            
+            //bne(I)
+           /* if (tals_tmp.instruction_id==6){
+                String bne_op_binary = Integer.toBinaryString(5);
+                String bne_rs_binary = Integer.toBinaryString(tals_tmp.rs);
+                String bne_rt_binary = Integer.toBinaryString(tals_tmp.rt);
+                String bne_immediate_binary = Integer.toBinaryString(tals_tmp.immediate);
+                
+                String addiu_string_binary = bne_op_binary + bne_rs_binary + bne_rt_binary +bne_immediate_binary;
+                int addiu_binary = Integer.valueOf(addiu_string_binary);
+                binary_list.add(addiu_binary);
+            }*/
+            
+           
+            /*if(tals.tmp.instruction_id==9){//lui // I-type
                     
                 String lui_op_binary = Integer.toBinaryString(15);
                 String lui_rs_binary = Integer.toBinaryString(tals_tmp.rs);
@@ -131,7 +143,8 @@ public class Phase3 {
                binary_list.add(ori_binary);
 
 
-            }
+            }*/
+            
            
         }
         return null;
