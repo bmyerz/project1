@@ -88,28 +88,34 @@ public class Phase3 {
                 functnumber=42;
                 }
                 
-                for(i=0;i<decimaltobinary6(0).size();){
-                Binary_list.add.decimaltobinary6(0).pop();
+                for(int i=0;i<decimaltobinary6(0).size();){
+                 int q=decimaltobinary6(0).pop();
+                    Binary_list.add(q);
                     
                 }
-             decimaltobinary6(st, 0); decimaltobinary5(st,tals_tmp.rs);decimaltobinary5(st,tals_tmp.rt);decimaltobinary5(st,tals_tmp.rd);decimaltobinary5(st,tals_tmp.shift);decimaltobinary6(st, 42);
-                
+                for(int i=0;i<decimaltobinary5(tals_tmp.rs).size()){
+                int q=decimaltobinary5(tals_tmp.rs);
+                 Binary_list.add(q);
                
-                /*
-                change integer to binary 
-                 String x=Integer.toBinaryString()
-                 int y=Integer.parseInt(x)
-                */
                 
-                //op//rs//rt//rd//shift//funct
+                }
+                for(int i=0;i<decimaltobinary5(tals_tmp.rt).size();){
+                int q=decimaltobinary5(tals_tmp.rt).pop();
+                 Binary_list.add.(q);            
+                }
+                for(int i=0;i<decimaltobinary5(tals_tmp.rd).size();){
+                int q=decimaltobinary5(tals_tmp.rd).pop();
+                 Binary_list.add.(q);            
+                }
+                for(int i=0;i<decimaltobinary5(functnumber).size();){
+                int q=decimaltobinary5(functnumber).pop();
+                 Binary_list.add.(q);            
+                }
+                                           
                 
                 
-                
-                   }
-            
-            }
-            
-            if(tals_tmp.instruction_id==1||tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
+           
+           if(tals_tmp.instruction_id==1||tals_tmp.instruction_id==5||tals_tmp.instruction_id==6||tals_tmp.instruction_id==9||tals_tmp.instruction_id==10){
             // put the algorithm for only I-type
             //need op,rs,rt,immediate//
                 if(tals_tmp.instruction_id==1){
